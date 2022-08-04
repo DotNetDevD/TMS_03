@@ -41,11 +41,16 @@ namespace Task_03
             return strNum;
         }
 
-        public static bool isPolidnrome(string s)
+        /// <summary>
+        /// Алгоритм построен на сравнение чаровых значений строкового массива
+        /// </summary>
+        public static bool isPalidnrome(string s)
         {
-            bool answer = true;
-            if (s[0] == '-')
+            bool answer = true; 
+            // Дополнительная проверка, если число отрицательное, убираем в строке 1 символ '-'
+            if (s[0] == '-') 
                 s = s.Substring(1);
+            // Начинаем проверять только числа которые больше 2 символов, тк любая цифра сама по себе палиндром
             if (s.Length >= 2)
                 for (int i = 0, j = s.Length - 1; i < s.Length; i++, j--)
                 {
@@ -59,15 +64,15 @@ namespace Task_03
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Программа для определения является ли введенное целочисленное число полиндромом");
+            Console.WriteLine("Программа для определения является ли введенное целочисленное число палиндромом");
             Console.Write("Введите ваше число: ");
             string number = InputNumber();
-            if (isPolidnrome(number))
+            if (isPalidnrome(number))
                 Console.WriteLine("Данное число является полиндромом");
             else
                 Console.WriteLine("Данное число не является полиндромом");
         }
     }
 }
-/* Реализовать алгоритм, который определяет является ли введенное целочисленное число полиндромом 
+/* Реализовать алгоритм, который определяет является ли введенное целочисленное число палиндромом 
    (читается одинаково слева направо и справа налево) */
