@@ -47,7 +47,6 @@
         /// <summary>
         /// Проверка строки, конвертируемой в число
         /// </summary>
-        /// <returns>Число необходимое для обмена</returns>
         public static bool CheckNumber(string s, out long num)
         {
             bool isNumber = true;
