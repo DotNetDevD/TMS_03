@@ -45,6 +45,9 @@ namespace Task_02
             return num;
         }
 
+       /// <summary>
+       /// Метод сравнения двух чисел
+       /// </summary>
         public static void Comparation(BigInteger a, BigInteger b)
         {
             if (a > b) Console.WriteLine($"{a} > {b}");
