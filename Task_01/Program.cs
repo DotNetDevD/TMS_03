@@ -62,20 +62,24 @@
             }
             return isNumber;
         }
+
+        /// <summary>
+        /// Ввод числа и проверка его с помощью метода CheckNumber 
+        /// </summary>
         public static long InputNumber()
         {
-            string? strFirstNum = Console.ReadLine();
+            string? strNum = Console.ReadLine();
             long num;
-            if (CheckNumber(strFirstNum, out num))
+            if (CheckNumber(strNum, out num))
             {
-                num = Convert.ToInt64(strFirstNum);
+                num = Convert.ToInt64(strNum);
             }
             else
             {
-                while (!CheckNumber(strFirstNum, out num))
+                while (!CheckNumber(strNum, out num))
                 {
                     Console.Write("Вас просили ввести число, давайте попробуем снова = ");
-                    strFirstNum = Console.ReadLine();
+                    strNum = Console.ReadLine();
                 }
             }
             return num;
